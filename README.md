@@ -2,13 +2,13 @@
 
 ![KunClaw Logo](images/logo.png)
 
+</div>
 
+# 🦞 KunClaw
 
-# 🦞 KunClaw Agent Framework
+> **OpenClaw的核心功能极简实现**
 
-> **给龙虾装上大脑、钳子、记忆和触角**
-
-KunClaw 是一个**极简、强大、可扩展**的 AI Agent 框架，采用最小必要功能设计原则，让你在本地完全掌控自己的 AI 助手。
+KunClaw 是**OpenClaw的众多小弟之一**，目标是用尽可能易于理解的方式实现OpenClaw的核心功能，我们将一步步实现、组装小龙虾，相信学习最好的方法就是实践。
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.13+-green.svg)](pyproject.toml)
