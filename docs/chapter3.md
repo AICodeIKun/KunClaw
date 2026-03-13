@@ -256,7 +256,7 @@ python agent_runtime.py
   Model: MiniMax-M2.5
   Workdir: D:\KunClaw\agent
   Session: session_1773334198
-  Tools: bash, read_file, write_file, edit_file
+  Tools: exec, read_file, write_file, edit_file
   Channels: cli, feishu
   Messages loaded: 4
 

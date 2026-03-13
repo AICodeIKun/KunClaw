@@ -138,7 +138,7 @@ workspace/.sessions/session_1234567890.jsonl
 ```json
 {"type": "user", "content": "法国的首都是什么？", "ts": 1234567890}
 {"type": "assistant", "content": [{"type": "text", "text": "法国的首都是巴黎。"}], "ts": 1234567891}
-{"type": "tool_use", "tool_use_id": "toolu_abc", "name": "bash", "input": {"command": "ls"}, "ts": 1234567892}
+{"type": "tool_use", "tool_use_id": "toolu_abc", "name": "exec", "input": {"command": "ls"}, "ts": 1234567892}
 {"type": "tool_result", "tool_use_id": "toolu_abc", "content": "file1.txt\nfile2.txt", "ts": 1234567893}
 ```
 

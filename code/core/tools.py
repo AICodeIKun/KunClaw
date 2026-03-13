@@ -2,7 +2,7 @@
 KunClaw 工具模块
 
 包含所有 Agent 工具的实现：
-- bash: 执行 shell 命令
+- exec: 执行 shell 命令
 - read_file: 读取文件内容
 - write_file: 写入文件
 - edit_file: 精确替换文件中的文本
@@ -63,7 +63,7 @@ def truncate(text: str, limit: int = MAX_TOOL_OUTPUT) -> str:
 # ============================================================================
 
 
-def tool_bash(command: str, timeout: int = 30) -> str:
+def tool_exec(command: str, timeout: int = 30) -> str:
     """执行 shell 命令并返回输出."""
     # 基础安全检查: 拒绝明显危险的命令
     dangerous = ["rm -rf /", "mkfs", "> /dev/sd", "dd if="]
@@ -71,7 +71,7 @@ def tool_bash(command: str, timeout: int = 30) -> str:
         if pattern in command:
             return f"错误: 拒绝执行危险命令，包含 '{pattern}'"
 
-    print_tool("bash", command)
+    print_tool("exec", command)
     try:
         result = subprocess.run(
             command,
@@ -163,7 +163,7 @@ def tool_edit_file(file_path: str, old_string: str, new_string: str) -> str:
 
 TOOLS = [
     {
-        "name": "bash",
+        "name": "exec",
         "description": ("执行 shell 命令并返回输出。适用于系统命令、git、包管理器等。"),
         "input_schema": {
             "type": "object",
@@ -242,7 +242,7 @@ TOOLS = [
 
 # 调度表: 工具名 -> 处理函数
 TOOL_HANDLERS: dict[str, Any] = {
-    "bash": tool_bash,
+    "exec": tool_exec,
     "read_file": tool_read_file,
     "write_file": tool_write_file,
     "edit_file": tool_edit_file,
