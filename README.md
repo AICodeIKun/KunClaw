@@ -75,9 +75,9 @@ python agent_runtime.py
 ```
 ============================================================
   KunClaw  |  工具使用 + 会话管理 + 多通道
-  Model: MiniMax-M2.5
-  Workdir: D:\KunClaw\agent
-  Session: session_1773334198
+  Model: 模型ID
+  Workdir: 工作目录
+  Session: 会话ID
   Tools: exec, read_file, write_file, edit_file
   Channels: cli, feishu
 
@@ -201,12 +201,10 @@ pip install ".[dev]"
 ## 🙏 致谢
 
 KunClaw 的设计受到以下项目启发：
-- **OpenClaw**：工具调用和编辑逻辑
-- **LangChain**：Agent 概念
-- **AutoGPT**：自主任务执行
-
-> "如果龙虾能思考，它还需要钳子来改造世界。"
-> — KunClaw 哲学
+- **OpenClaw**
+- **Claw0**
+- **Nanobot**
+- **hello-claw**
 
 ---
 
